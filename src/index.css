@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sakani-navy: #1a237e;
+  --color-sakani-emerald: #2e7d32;
+  --color-sakani-accent: #388e3c;
+  --color-sakani-bg: #f8fafc;
+  --color-sakani-white: #ffffff;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-premium:
+    0 10px 30px -10px rgba(26, 35, 126, 0.1),
+    0 4px 6px -4px rgba(26, 35, 126, 0.05);
+  --shadow-inner-soft: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-sakani-bg text-sakani-navy font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+/* Custom Utilities */
+.glass-effect {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.gradient-navy {
+  @apply bg-gradient-to-br from-sakani-navy to-[#283593];
+}
+
+.sakani-card {
+  @apply bg-white rounded-3xl p-6 shadow-premium;
+}
